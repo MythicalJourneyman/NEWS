@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.mythicaljourneyman.news">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,6 +13,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".views.activities.SplashActivity"
+            android:configChanges="orientation|layoutDirection|screenSize|fontScale|density|screenLayout"
+            android:screenOrientation="sensorPortrait"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -20,13 +24,17 @@
         </activity>
         <activity
             android:name=".views.activities.NewsItemListActivity"
+            android:configChanges="orientation|layoutDirection|screenSize|fontScale|density|screenLayout"
             android:label="@string/title_newsitem_list"
+            android:screenOrientation="sensorPortrait"
             android:theme="@style/AppTheme">
         </activity>
         <activity
             android:name=".views.activities.NewsItemDetailActivity"
+            android:configChanges="orientation|layoutDirection|screenSize|fontScale|density|screenLayout"
             android:label="@string/title_newsitem_detail"
             android:parentActivityName=".views.activities.NewsItemListActivity"
+            android:screenOrientation="sensorPortrait"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
